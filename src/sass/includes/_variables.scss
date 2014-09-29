@@ -23,15 +23,42 @@ $fontPlay: 'Play', sans-serif;
 $fontRoboto: 'Roboto', sans-serif;
 
 @font-face {
-  font-family: '3Dumb';
-  src: url('../fonts/3Dumb.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/3Dumb.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/3Dumb.woff') format('woff'), /* Modern Browsers */
-  url('../fonts/3Dumb.ttf')  format('truetype'), /* Safari, Android, iOS */
-  url('../fonts/3Dumb.svg#489a04c7630b6d11a2d5d41321de9892') format('svg'); /* Legacy iOS */
+  font-family: 'BankGothic Lt BT';
+  src: url('../fonts/bankgthl.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/bankgthl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/bankgthl.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/bankgthl.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/bankgthl.svg#8a12590ffea2d4262a81e18be518c9d1') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  200;
+}
+
+
+@font-face {
+  font-family: 'Franklin Gothic Medium';
+  src: url('../fonts/ufonts.com_franklin-gothic-medium.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ufonts.com_franklin-gothic-medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/ufonts.com_franklin-gothic-medium.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/ufonts.com_franklin-gothic-medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/ufonts.com_franklin-gothic-medium.svg#3a9d5be2ce2a615738fe880b1ca0b370') format('svg'); /* Legacy iOS */
 
   font-style:   normal;
   font-weight:  400;
+}
+
+
+@font-face {
+  font-family: 'segoe_printregular';
+  src: url('../fonts/1939590993.eot');
+  src: url('../fonts/1939590993.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/1939590993.woff2') format('woff2'),
+  url('../fonts/1939590993.woff') format('woff'),
+  url('../fonts/1939590993.ttf') format('truetype'),
+  url('../fonts/1939590993.svg#segoe_printregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
 }
 
 //main class="container"

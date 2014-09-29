@@ -64,6 +64,9 @@ a{
   clear: both;
 }
 
+nav a {
+  font-family: 'Franklin Gothic Medium';
+}
   //________
 
   /* top line in header: logo + menu*/
@@ -90,17 +93,19 @@ a{
       height: 67px;
     }
     .logo-text{
+      font-family: 'BankGothic Lt BT';
       color: #f1f1e8;
       position: relative;
-      top: 112px;
+      top: 118px;
       display: none;
     }
     .logo-textShadow{
+      font-family: 'BankGothic Lt BT';
       display: none;
       transform: rotateX(180deg);
       color: #3C3C3C;
       position: relative;
-      top: 104px;
+      top: 111px;
     }
     &:hover{
       color: inherit;
@@ -122,7 +127,7 @@ a{
     font-weight: bold;
     line-height: 24px;
     span{
-      font-style: italic;
+      font-family: 'segoe_printregular';
     }
   }
 }
@@ -131,10 +136,9 @@ a{
   margin: 0 auto;
   min-height: 512px;
   background: #000;
-  background: url('../img/selectBg.png') repeat;
+  background: url('../img/getCodeBg.jpg') center no-repeat;
   .container{
     min-height: 512px;
-    background: url('../img/getCodeBg.jpg') no-repeat;
   }
   h1{
     font-family: "Arial";
@@ -158,7 +162,10 @@ a{
   color: #fff;
   float: left;
   .memAction{
-
+    color: #FFF;
+    & * {
+      transition: width ease 550ms, font-size ease 550ms, background-color  ease 550ms;
+    }
     &-desc{
       margin: 0 auto -10px;
       width: 90%;
@@ -183,7 +190,6 @@ a{
       }
     }
     &-link{
-      color: #FFF;
       width: 80%;
       height: 30px;
       border-radius: 7px/4px;
@@ -195,9 +201,9 @@ a{
       font-family: "Arial";
       font-size:12px;
       font-weight: bold;
-      &:hover{
-        background: #126912;
-      }
+    }
+    &:hover .memAction-link{
+      background: #126912;
     }
   }
 }
@@ -263,6 +269,7 @@ a{
     }
     p {
       font-size: 19px;
+
     }
   }
 
@@ -279,7 +286,7 @@ a{
     text-align: center;
     margin: 0 auto;
     color: #0f4f0f;
-    font-family: "SegoePrint";
+    font-family: 'segoe_printregular';
     font-size: 14px;
     font-weight: bold;
   }
@@ -391,35 +398,6 @@ footer {
         bottom: 10px;
         z-index: 1;
       }
-      a{
-        text-align: center;
-        box-sizing: border-box;
-        color: $green;
-        position: relative;
-        text-decoration: none;
-        width: 100%;
-        padding: 0.7em;
-        float: left;
-        text-transform: uppercase;
-        font-size: 17px;
-        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
-        z-index: 111;
-        &.active:after {
-          bottom: 5px;
-          position: absolute;
-          left: 0;
-          right: 0;
-          display: block;
-          margin: 0 auto;
-          content: '';
-          width: 100%;
-          height: 5px;
-          background-color: #0F7B0F;
-        }
-        &:hover {
-          color: #fff;
-        }
-      }
     }
   }
   p{
@@ -493,6 +471,15 @@ footer {
         padding-top: 14px;
         font-size: 18px;
       }
+      &:hover h2 {
+        font-size: 41px;
+      }
+      &:hover h3 {
+        font-size: 22px;
+      }
+      &:hover .memAction-desc{
+        width: 254px;
+      }
     }
   }
 
@@ -544,6 +531,15 @@ footer {
         width: 216px;
         padding-top: 19px;
         font-size: 23px;
+      }
+      &:hover h2 {
+        font-size: 47px;
+      }
+      &:hover h3 {
+        font-size: 22px;
+      }
+      &:hover .memAction-desc{
+        width: 288px;
       }
     }
   }

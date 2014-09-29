@@ -324,13 +324,29 @@ td, th {
   padding: 0; }
 
 @font-face {
-  font-family: '3Dumb';
-  src: url('../fonts/3Dumb.eot');
+  font-family: 'BankGothic Lt BT';
+  src: url('../fonts/bankgthl.eot');
   /* IE9 Compat Modes */
-  src: url('../fonts/3Dumb.eot?#iefix') format('embedded-opentype'), url('../fonts/3Dumb.woff') format('woff'), url('../fonts/3Dumb.ttf') format('truetype'), url('../fonts/3Dumb.svg#489a04c7630b6d11a2d5d41321de9892') format('svg');
+  src: url('../fonts/bankgthl.eot?#iefix') format('embedded-opentype'), url('../fonts/bankgthl.woff') format('woff'), url('../fonts/bankgthl.ttf') format('truetype'), url('../fonts/bankgthl.svg#8a12590ffea2d4262a81e18be518c9d1') format('svg');
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 200; }
+
+@font-face {
+  font-family: 'Franklin Gothic Medium';
+  src: url('../fonts/ufonts.com_franklin-gothic-medium.eot');
+  /* IE9 Compat Modes */
+  src: url('../fonts/ufonts.com_franklin-gothic-medium.eot?#iefix') format('embedded-opentype'), url('../fonts/ufonts.com_franklin-gothic-medium.woff') format('woff'), url('../fonts/ufonts.com_franklin-gothic-medium.ttf') format('truetype'), url('../fonts/ufonts.com_franklin-gothic-medium.svg#3a9d5be2ce2a615738fe880b1ca0b370') format('svg');
   /* Legacy iOS */
   font-style: normal;
   font-weight: 400; }
+
+@font-face {
+  font-family: 'segoe_printregular';
+  src: url('../fonts/1939590993.eot');
+  src: url('../fonts/1939590993.eot?#iefix') format('embedded-opentype'), url('../fonts/1939590993.woff2') format('woff2'), url('../fonts/1939590993.woff') format('woff'), url('../fonts/1939590993.ttf') format('truetype'), url('../fonts/1939590993.svg#segoe_printregular') format('svg');
+  font-weight: normal;
+  font-style: normal; }
 
 .js .nav-collapse {
   clip: rect(0 0 0 0);
@@ -398,29 +414,34 @@ td, th {
       position: absolute;
       bottom: 10px;
       z-index: -1; }
-  .nav-collapse a {
-    color: #107c0f;
-    position: relative;
-    text-decoration: none;
-    width: 100%;
-    padding: 0.7em;
-    float: left;
-    text-transform: uppercase;
-    font-size: 17px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75); }
-    .nav-collapse a.active:after {
-      bottom: 5px;
-      position: absolute;
-      left: 0;
-      right: 0;
-      display: block;
-      margin: 0 auto;
-      content: '';
-      width: 100%;
-      height: 5px;
-      background-color: #0f7b0f; }
   .nav-collapse ul ul a {
     background: #ca3716; }
+
+nav a {
+  color: #107c0f;
+  position: relative;
+  text-decoration: none;
+  padding: 0.7em 0;
+  float: left;
+  text-transform: uppercase;
+  font-size: 17px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75); }
+  nav a span {
+    bottom: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+    content: '';
+    width: 100%;
+    height: 5px;
+    -webkit-transition: all ease 500ms;
+            transition: all ease 500ms; }
+  nav a:hover span {
+    background-color: #0f7b0f; }
+  nav a.active span {
+    background-color: #0f7b0f; }
 
 /* media queries */
 @media screen and (max-width: 767px) {
@@ -461,7 +482,7 @@ td, th {
         background: rgba(228, 1, 0, 0.22); }
     .nav-collapse a {
       margin: 0;
-      text-align: center; }
+      text-align: left; }
       .nav-collapse a:hover {
         color: #fff; } }
 
@@ -566,6 +587,9 @@ a {
   display: block;
   clear: both; }
 
+nav a {
+  font-family: 'Franklin Gothic Medium'; }
+
 /* top line in header: logo + menu*/
 .top {
   background: #202020;
@@ -589,17 +613,19 @@ a {
       right: 0;
       height: 67px; }
     .top-logo .logo-text {
+      font-family: 'BankGothic Lt BT';
       color: #f1f1e8;
       position: relative;
-      top: 112px;
+      top: 118px;
       display: none; }
     .top-logo .logo-textShadow {
+      font-family: 'BankGothic Lt BT';
       display: none;
       -webkit-transform: rotateX(180deg);
               transform: rotateX(180deg);
       color: #3C3C3C;
       position: relative;
-      top: 104px; }
+      top: 111px; }
     .top-logo:hover {
       color: inherit; }
 
@@ -616,16 +642,15 @@ a {
     font-weight: bold;
     line-height: 24px; }
     .codeStat h3 span {
-      font-style: italic; }
+      font-family: 'segoe_printregular'; }
 
 .codeSelect {
   margin: 0 auto;
   min-height: 512px;
   background: #000;
-  background: url('../img/selectBg.png') repeat; }
+  background: url('../img/getCodeBg.jpg') center no-repeat; }
   .codeSelect .container {
-    min-height: 512px;
-    background: url('../img/getCodeBg.jpg') no-repeat; }
+    min-height: 512px; }
   .codeSelect h1 {
     font-family: "Arial";
     font-size: 30px;
@@ -645,39 +670,43 @@ a {
   text-align: center;
   color: #fff;
   float: left; }
-  .memPlan .memAction-desc {
-    margin: 0 auto -10px;
-    width: 90%;
-    height: 120px;
-    background: url('../img/memBg.png') center no-repeat;
-    background-size: 100% 100%;
-    z-index: 99;
-    position: relative; }
-    .memPlan .memAction-desc h2, .memPlan .memAction-desc h3 {
-      margin: 0;
-      font-family: Arial;
-      word-break: break-all;
-      word-spacing: 300px; }
-    .memPlan .memAction-desc h2 {
-      padding: 12px 0 10px 0;
-      font-size: 22px; }
-    .memPlan .memAction-desc h3 {
-      margin-top: -7px;
-      font-size: 12px; }
-  .memPlan .memAction-link {
-    color: #FFF;
-    width: 80%;
-    height: 30px;
-    border-radius: 7px/4px;
-    background-clip: padding-box;
-    background-color: #0F4F0E;
-    display: block;
-    padding-top: 28px;
-    margin: 0 auto;
-    font-family: "Arial";
-    font-size: 12px;
-    font-weight: bold; }
-    .memPlan .memAction-link:hover {
+  .memPlan .memAction {
+    color: #FFF; }
+    .memPlan .memAction * {
+      -webkit-transition: width ease 550ms, font-size ease 550ms, background-color ease 550ms;
+              transition: width ease 550ms, font-size ease 550ms, background-color ease 550ms; }
+    .memPlan .memAction-desc {
+      margin: 0 auto -10px;
+      width: 90%;
+      height: 120px;
+      background: url('../img/memBg.png') center no-repeat;
+      background-size: 100% 100%;
+      z-index: 99;
+      position: relative; }
+      .memPlan .memAction-desc h2, .memPlan .memAction-desc h3 {
+        margin: 0;
+        font-family: Arial;
+        word-break: break-all;
+        word-spacing: 300px; }
+      .memPlan .memAction-desc h2 {
+        padding: 12px 0 10px 0;
+        font-size: 22px; }
+      .memPlan .memAction-desc h3 {
+        margin-top: -7px;
+        font-size: 12px; }
+    .memPlan .memAction-link {
+      width: 80%;
+      height: 30px;
+      border-radius: 7px/4px;
+      background-clip: padding-box;
+      background-color: #0F4F0E;
+      display: block;
+      padding-top: 28px;
+      margin: 0 auto;
+      font-family: "Arial";
+      font-size: 12px;
+      font-weight: bold; }
+    .memPlan .memAction:hover .memAction-link {
       background: #126912; }
 
 .memPlan-title {
@@ -742,7 +771,7 @@ a {
     text-align: center;
     margin: 0 auto;
     color: #0f4f0f;
-    font-family: "SegoePrint";
+    font-family: 'segoe_printregular';
     font-size: 14px;
     font-weight: bold; }
 
@@ -842,33 +871,6 @@ footer {
         position: absolute;
         bottom: 10px;
         z-index: 1; }
-      footer nav li a {
-        text-align: center;
-        -moz-box-sizing: border-box;
-             box-sizing: border-box;
-        color: #107c0f;
-        position: relative;
-        text-decoration: none;
-        width: 100%;
-        padding: 0.7em;
-        float: left;
-        text-transform: uppercase;
-        font-size: 17px;
-        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
-        z-index: 111; }
-        footer nav li a.active:after {
-          bottom: 5px;
-          position: absolute;
-          left: 0;
-          right: 0;
-          display: block;
-          margin: 0 auto;
-          content: '';
-          width: 100%;
-          height: 5px;
-          background-color: #0F7B0F; }
-        footer nav li a:hover {
-          color: #fff; }
   footer p {
     clear: both;
     color: #0f4f0f;
@@ -906,6 +908,12 @@ footer {
     width: 216px;
     padding-top: 14px;
     font-size: 18px; }
+  .memPlan .memAction:hover h2 {
+    font-size: 41px; }
+  .memPlan .memAction:hover h3 {
+    font-size: 22px; }
+  .memPlan .memAction:hover .memAction-desc {
+    width: 254px; }
   .comments .commBlWrap {
     width: 33.33333%;
     float: left; }
@@ -935,6 +943,12 @@ footer {
     width: 216px;
     padding-top: 19px;
     font-size: 23px; }
+  .memPlan .memAction:hover h2 {
+    font-size: 47px; }
+  .memPlan .memAction:hover h3 {
+    font-size: 22px; }
+  .memPlan .memAction:hover .memAction-desc {
+    width: 288px; }
   .memPlan-title {
     display: block; }
   .mobilePlanTitle {

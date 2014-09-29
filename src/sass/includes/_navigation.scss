@@ -76,18 +76,25 @@
       z-index: -1;
     }
   }
+  ul ul a {
+    background: #ca3716;
+  }
+}
+
+nav{
   a {
     color: $green;
     position: relative;
     text-decoration: none;
-    width: 100%;
-    padding: 0.7em;
+    //    width: 100%;
+    //    margin-right: 10px;
+    padding: 0.7em 0;
     float: left;
     text-transform: uppercase;
-//    font-family: "FranklinGothic";
+    //    font-family: "FranklinGothic";
     font-size: 17px;
     text-shadow: 0 1px 1px rgba(0,0,0,.75);
-    &.active:after{
+    span {
       bottom: 5px;
       position: absolute;
       left: 0;
@@ -97,13 +104,17 @@
       content: '';
       width: 100%;
       height: 5px;
+      transition: all ease 500ms;
+    }
+    &:hover span{
+      background-color: #0f7b0f;
+    }
+    &.active span{
       background-color: #0f7b0f;
     }
   }
-  ul ul a {
-    background: #ca3716;
-  }
 }
+
 
 
 /* media queries */
@@ -159,7 +170,7 @@
     }
     a {
       margin: 0;
-      text-align: center;
+      text-align: left;
       &:hover {
 //        background: #FFF;
 //        background: rgba(255, 255, 255, 0.55);
