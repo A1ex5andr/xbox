@@ -1,5 +1,6 @@
 node_modules
 .idea
+dev
 gulpfile.js
 package.json
 gulp_installs.md

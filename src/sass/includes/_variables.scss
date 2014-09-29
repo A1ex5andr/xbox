@@ -1,0 +1,53 @@
+//colors
+$white: #ffffff;
+$gray: #202020;
+$green: #107c0f;
+$green_1: #44BF87;
+$green_2: #1D8281;
+$green_3: #176765;
+$orange_1: #FBD258;
+$orange_2: #F29A3F;
+$orange_3: #DB634F;
+$dark: #ffffff;
+
+
+//fonts
+$logoFont: 'Arial';
+@import url(http://fonts.googleapis.com/css?family=Montserrat:700);
+$fontMontserrat: 'Montserrat', sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=cyrillic-ext,latin);
+$fontUbuntu: 'Ubuntu', sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Play:400,700&subset=latin,cyrillic);
+$fontPlay: 'Play', sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,900,700&subset=latin,cyrillic);
+$fontRoboto: 'Roboto', sans-serif;
+
+@font-face {
+  font-family: '3Dumb';
+  src: url('../fonts/3Dumb.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/3Dumb.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/3Dumb.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/3Dumb.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/3Dumb.svg#489a04c7630b6d11a2d5d41321de9892') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
+
+//main class="container"
+@mixin container($data){
+  max-width: $data;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// media queries @media (min-width: $data)
+$mobile: 767px;
+$tablet: 768px;
+$small: 992px;
+$large: 1200px;
+
+// media queries max-width: $data;
+$tabletContainer: 752px;
+$smallContainer: 970px;
+$largeContainer: 1170px;

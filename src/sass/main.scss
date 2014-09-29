@@ -1,0 +1,313 @@
+//@import "includes/reset";
+@import "includes/normalize";
+@import "includes/variables";
+@import "includes/navigation";
+
+
+/*                    **
+**   Default styles   **
+**                    */
+// ______________________________________________________________________________|
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 320px;
+  background-color: #f8f8f8;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  color: $dark;
+}
+
+a{
+  color: $green_3;
+  text-decoration: none;
+  transition: all ease 500ms;
+}
+
+h1, h2, h3 {
+    font-family: $fontMontserrat;
+}
+.hideme
+{
+  opacity:0;
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  height: 100%;
+}
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+  //________
+
+  /* top line in header: logo + menu*/
+.top{
+  background: $gray;
+  overflow: hidden;
+  position: relative;
+  top:0;
+  width: 100%;
+  z-index: 9999;
+  &-logo{
+    float: left;
+    font-family: $logoFont;
+    padding-left: 10px;
+    font-size: 18px;
+    position: relative;
+    .logo-img{
+      display: block;
+      margin: 0 auto;
+      padding: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 67px;
+    }
+    .logo-text{
+      color: #f1f1e8;
+      position: relative;
+      top: 112px;
+      display: none;
+    }
+    .logo-textShadow{
+      display: none;
+      transform: rotateX(180deg);
+      color: #3C3C3C;
+      position: relative;
+      top: 104px;
+    }
+    &:hover{
+      color: inherit;
+    }
+  }
+}
+
+  //________
+
+.codeStat{
+  width: 100%;
+  height: 23px;
+  background-color: #0f7b0f;
+  h3{
+    margin: 0 auto;
+    text-align: center;color: #fff;
+    font-family: "Arial";
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 24px;
+    span{
+      font-style: italic;
+    }
+  }
+}
+
+.codeSelect{
+  margin: 0 auto;
+  min-height: 512px;
+  background: #000;
+  .container{
+    min-height: 512px;
+    background: url('../img/getCodeBg.jpg') no-repeat;
+  }
+  h1{
+    font-family: "Arial";
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+    color: #EAEAEA;
+    background: -webkit-linear-gradient(#FFF, #BEBEBE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-top: 33px;
+    text-transform: uppercase;
+    padding-bottom: 145px;
+  }
+}
+
+.memPlan{
+  width: percentage(1/3);
+  text-align: center;
+  color: #fff;
+  float: left;
+  .memAction{
+
+    &-desc{
+      margin: 0 auto -10px;
+      width: 90%;
+      height: 120px;
+      background: url('../img/memBg.png') center no-repeat;
+      background-size: 100% 100%;
+      z-index: 99;
+      position: relative;
+      h2, h3{
+        margin: 0;
+        font-family: Arial;
+        word-break: break-all;
+        word-spacing: 300px;
+      }
+      h2{
+        padding: 12px 0 10px 0;
+        font-size: 22px;
+      }
+      h3{
+        margin-top: -7px;
+        font-size: 12px;
+      }
+    }
+    &-link{
+      color: #FFF;
+      width: 80%;
+      height: 30px;
+      border-radius: 7px/4px;
+      background-clip: padding-box;
+      background-color: #0F4F0E;
+      display: block;
+      padding-top: 28px;
+      margin: 0 auto;
+      font-family: "Arial";
+      font-size:12px;
+      font-weight: bold;
+      &:hover{
+        background: #126912;
+      }
+    }
+  }
+}
+.memPlan-title{
+  height: 36px;
+  width: 273px;
+  background: url('../img/xboxLive.png') center no-repeat;
+  background-size: 100%;
+  display: none;
+  margin: 0 auto 11px;
+}
+.mobilePlanTitle {
+  display: block;
+}
+
+/* INDEX PAGE */
+
+
+/* slogan */
+.slogan {
+//  background: url("../img/slogan.jpg") center no-repeat;
+
+}
+
+
+/* all sections except main 1st general  */
+
+/**/
+.about{
+  
+}
+
+//  FOR DEVELOPMENT ONLY
+// ______________________________________________________________________________|
+//@media (max-width: 320px) {
+//  .container {
+//    @include container(100%);
+//  }
+//}
+
+//  from 768px to 959 ! ! ! !
+// ______________________________________________________________________________|
+@media (min-width: $tablet) {
+  .container {
+    @include container($tablet);
+  }
+  .top{
+    height: 147px;
+    nav{
+      padding-top: 50px;
+    }
+    &-logo{
+
+      .logo-img{
+        height: 145px;
+      }
+      .logo-text{
+
+        display: block;
+      }
+      .logo-textShadow{
+        display: block;
+      }
+      &:hover{
+        color: inherit;
+      }
+    }
+  }
+
+  .codeSelect{
+    h1{
+
+    }
+  }
+  .memPlan{
+    .memAction{
+      &-desc{
+        width: 278px;
+        background-size: 100%;
+        h2, h3{
+          word-spacing: normal;
+        }
+        h2{
+          padding: 22px 0 0 0;
+          font-size: 46px;
+        }
+        h3{
+          margin-top: -7px;
+          font-size: 20px;
+        }
+      }
+      &-link{
+        width: 216px;
+        padding-top: 19px;
+        font-size: 23px;
+      }
+    }
+  }
+  .memPlan-title{
+    display: block;
+  }
+  .mobilePlanTitle {
+    display: none;
+  }
+}
+
+//  from 960px to 1199 ! ! ! !
+// ______________________________________________________________________________|
+@media (min-width: $small) {
+  .container {
+    @include container($small);
+  }
+ 
+}
+
+// from 1200 - final maxWidth
+// ______________________________________________________________________________|
+@media (min-width: $large) {
+  .container {
+    @include container($large);
+  }
+  .top{
+    nav{
+      margin-right: 79px;
+    }
+  }
+}
+
