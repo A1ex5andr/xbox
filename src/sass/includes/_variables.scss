@@ -23,6 +23,20 @@ $fontPlay: 'Play', sans-serif;
 $fontRoboto: 'Roboto', sans-serif;
 
 @font-face {
+  font-family: 'Consolas';
+  src: url('../fonts/Consolas.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Consolas.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/Consolas.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/Consolas.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/Consolas.svg#16507cdd5bdee782f26fca800650b3c2') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
+
+
+
+@font-face {
   font-family: 'BankGothic Lt BT';
   src: url('../fonts/bankgthl.eot'); /* IE9 Compat Modes */
   src: url('../fonts/bankgthl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -59,6 +73,18 @@ $fontRoboto: 'Roboto', sans-serif;
   font-weight: normal;
   font-style: normal;
 
+}
+
+@font-face {
+  font-family: 'Bebas';
+  src: url('../fonts/BEBAS.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/BEBAS.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/BEBAS.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/BEBAS.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/BEBAS.svg#df5fea4d22b6d622fcf236336029d640') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  400;
 }
 
 //main class="container"

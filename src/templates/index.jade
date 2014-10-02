@@ -9,40 +9,12 @@ html
         meta(http-equiv="X-UA-Compatible" content="IE=edge")
         link(href='css/main.css', rel='stylesheet')
     body
-        // header of the page START
-        header.top
-            div.container
-                a(href='#').top-logo
-                    img.logo-img(src="img/logo.png")
-                    span.logo-text XBOX CODES ONLINE
-                    span.logo-textShadow XBOX CODES ONLINE
-                nav#navigation.nav-collapse
-                    ul
-                        li
-                            a(href='#').active
-                                | HOME
-                                span
-                        li
-                            a(href='#')
-                                | FORUM
-                                span
-                        li
-                            a(href='#')
-                                | policy
-                                span
-                        li
-                            a(href='#')
-                                | terms
-                                span
-                        li
-                            a(href='#')
-                                | instructions
-                                span
-        // header of the page END
+        include includes/head.jade
         // ADV of the page START
         .codeStat
             .container
-                h3 84,476
+                h3
+                    b#codesServed 84,476
                     span  codes served, and counting!
         .codeSelect
             .container
@@ -50,21 +22,21 @@ html
                 .memPlan-title.mobilePlanTitle
                 .memPlan
                     .memPlan-title
-                    a.memAction(href="#")
+                    a.memAction(href="redeem.html")
                         .memAction-desc
                             h2 1 MONTH
                             h3 BRONZE MEMBERSHIP
                         .memAction-link CLICK HERE
                 .memPlan
                     .memPlan-title
-                    a.memAction(href="#")
+                    a.memAction(href="redeem.html")
                         .memAction-desc
                             h2 3 MONTH
                             h3 SILVER MEMBERSHIP
                         .memAction-link CLICK HERE
                 .memPlan
                     .memPlan-title
-                    a.memAction(href="#")
+                    a.memAction(href="redeem.html")
                         .memAction-desc
                             h2 12 MONTH
                             h3 GOLD MEMBERSHIP
@@ -83,13 +55,13 @@ html
                         li <span></span> Completely legal
                         li <span></span> Works in almost every country
                         li <span></span> Takes less than a minute
-                    a.btn.getCode(href="#") Get your FREE code now!
+                    a.btn.getCode(href="redeem.html") Get your FREE code now!
                     p Within Seconds!
                 .stat
                     h4 Codes Remaining:
                         b  73
-                    h4 Next Update:
-                        b  Monday 21/09/2014
+                    h4 Last Update:
+                        b  <span id="toDay"></span>
                     p Don’t miss your opportunity!
         // MAIN section of the page END
 
@@ -125,30 +97,30 @@ html
                     Morbi iaculis molestie mattis.
                 .commBlWrap
                     .commBl
-                        img.commBl-img(src="img/commImg.jpg")
-                        .commBl-data
+                        img.commBl-img(src="img/image-1.jpg" alt="")
+                        //-.commBl-data
                             .userPic
-                                img(src="img/userPic.png")
+                                img(src="img/userPic.png" alt="")
                             .userText
                                 p “Nam posuere interdum ligula. Cras tincidunt mauris porta, viverra dolor a, tempor nulla!”
                                 h5.
                                     - Gary Vayner
                 .commBlWrap
                     .commBl
-                        img.commBl-img(src="img/commImg.jpg")
-                        .commBl-data
+                        img.commBl-img(src="img/image-2.jpg" alt="")
+                        //-.commBl-data
                             .userPic
-                                img(src="img/userPic.png")
+                                img(src="img/userPic.png" alt="")
                             .userText
                                 p “Nam posuere interdum ligula. Cras tincidunt mauris porta, viverra dolor a, tempor nulla!”
                                 h5.
                                     - Gary Vayner
                 .commBlWrap
                     .commBl
-                        img.commBl-img(src="img/commImg.jpg")
-                        .commBl-data
+                        img.commBl-img(src="img/image-3.jpg" alt="")
+                        //-.commBl-data
                             .userPic
-                                img(src="img/userPic.png")
+                                img(src="img/userPic.png" alt="")
                             .userText
                                 p “Nam posuere interdum ligula. Cras tincidunt mauris porta, viverra dolor a, tempor nulla!”
                                 h5.
@@ -156,37 +128,4 @@ html
 
         // comments of the page END
 
-        // footer of the page START
-        footer
-            .container
-                nav
-                    ul
-                        li
-                            a(href='#').active
-                                | HOME
-                                span
-                        li
-                            a(href='#')
-                                | FORUM
-                                span
-                        li
-                            a(href='#')
-                                | policy
-                                span
-                        li
-                            a(href='#')
-                                | terms
-                                span
-                        li
-                            a(href='#')
-                                | instructions
-                                span
-
-                p.info.
-                    Toutes les marques déposées mentionnées ici appartiennent au leurs propriétaires respectifs. En cliquant sur le lien - Rejoignez le Xbox Live Gold Gratuitment,
-                    vous vous mettez d’accord avec les termes de service
-        // footer of the page END
-
-        script(src="https://code.jquery.com/jquery-2.1.1.min.js")
-        <script>window.jQuery || document.write('<script src="js/jquery.min.js">\x3C/script>')</script>
-        script(src='js/main.js')
+        include includes/footer.jade

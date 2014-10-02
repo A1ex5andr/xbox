@@ -126,6 +126,8 @@ nav{
       background: $white+-25;
       border-bottom: 1px solid $white+-45;
       background: #F3F3F3;
+      width: 100%;
+      padding-left: 30px;
     }
   }
   .nav-collapse ul ul li {
@@ -162,8 +164,9 @@ nav{
       background: #37302a;
     }
     li {
-      min-width: 100px;
+//      min-width: 100px;
       width: auto;
+      padding-right: 20px;
       &hover{
         background: rgba(228, 1, 0, 0.22);
       }
@@ -176,6 +179,13 @@ nav{
 //        background: rgba(255, 255, 255, 0.55);
         color: #fff;
       }
+    }
+    li:last-child {
+      padding-right: 0;
+    }
+    li:last-child a  {
+      float: right;
+      text-align: right;
     }
   }
 }

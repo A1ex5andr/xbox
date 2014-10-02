@@ -1,0 +1,64 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        title GULP IS THE BEST
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+        meta(name='author' content='Alexander Yushchak aka Coderbit')
+        meta(name="description" content="")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        link(href='css/main.css', rel='stylesheet')
+    body
+        span.
+            <div id="fb-root"></div>
+                <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+        //-.wrapper
+        include includes/head.jade
+        // header of the page END
+
+        // redeem of the page START
+        .redeem
+            .popUp
+                .container
+                    h1  You’re seconds away!
+                    h2 like and share on facebook, then click the button below!
+                    .social
+                        p.warn.
+                            This is the last step before getting your Xbox Live Codes.
+                            Please press "Share on Facebook" and press "Share" again on the popup window. (It's optional to type something in the box)
+                            Press "Get my code now" when you're done.
+                        //-a.btnFace(href="#")
+                        .faceLike.
+                            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+                        .stat 71,229 people like this. Be the first of your friends.
+                        img.plusSign(src="img/plus.png")
+                        .btnShare(class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button")
+                    a.btnGetCode.btnOrange(href="#") Get My code Now!
+
+            .container
+                h1.mainTitle You’ve earned it!
+                .earn
+                    img.xBoxLogo(src="img/reedXbox.png", alt="")
+                    h2 Your Free Xbox Live code:
+                    h3.truncate#code WV8GF-3MY8B-QXYKHY-BDXTW-*****
+                    .actions
+                        a.btnRedeem.btnOrange(href="#") redeem
+                        a.btnRefresh(href="#")
+                            img(src="img/refresh.png", alt="")
+                    .desc.
+                        your free code has been generated:<br>
+                        <span id="date"></span>
+
+
+
+
+        // redeem of the page START
+
+        //-.push
+        include includes/footer.jade
