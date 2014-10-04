@@ -467,9 +467,12 @@ h1.mainTitle{
       text-align: center;
       color: #fff;
       font-family: 'BankGothic Lt BT';
-      font-size: 33px;
+
       padding: 30px 0px;
-      margin: 0 auto;
+
+      font-size: 12px;
+      margin-top: 34px;
+
     }
     width: 100%;
     min-height: 580px;
@@ -766,6 +769,8 @@ h1.mainTitle{
       }
       h3{
         padding: 0;
+        font-size: 33px;
+        margin: 0 auto;
       }
       max-width: 970px;
       height: 647px;

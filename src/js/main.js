@@ -69,7 +69,7 @@ $(document).ready(function() {
     var start = 26344;
     function codesMade () {
         start += 1;
-        made = start.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'");;
+        made = start.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
         $('#codesServed').html(made);
     }
     codesMade();

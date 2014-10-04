@@ -967,9 +967,9 @@ h1.mainTitle {
       text-align: center;
       color: #fff;
       font-family: 'BankGothic Lt BT';
-      font-size: 33px;
       padding: 30px 0px;
-      margin: 0 auto; }
+      font-size: 12px;
+      margin-top: 34px; }
     .redeem .earn .xBoxLogo {
       margin: 0 auto;
       padding: 40px 0 0 0;
@@ -1189,7 +1189,9 @@ h1.mainTitle {
       font-size: 33px;
       margin: 16px auto 13px; }
     .redeem .earn h3 {
-      padding: 0; }
+      padding: 0;
+      font-size: 33px;
+      margin: 0 auto; }
     .redeem .earn .xBoxLogo {
       padding: 75px 0 0 0; }
     .redeem .earn .actions {
